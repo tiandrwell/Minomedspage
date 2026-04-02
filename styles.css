@@ -1133,6 +1133,15 @@ a { text-decoration: none; color: inherit; }
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
+  .floating-nav {
+    width: 100%;
+    max-width: calc(100vw - 2rem);
+    margin: 0 1rem;
+    padding-left: 1rem;
+  }
+  .nav-links { display: none; }
+  .nav-content { justify-content: space-between; gap: 0.5rem; }
+
   .hero h1 { font-size: 3rem; }
   .hero h1 em { font-size: 3.5rem; }
   .intro-layout { grid-template-columns: 1fr; gap: 3rem; }
@@ -1140,16 +1149,34 @@ a { text-decoration: none; color: inherit; }
   .moa-card.wide { grid-column: span 1; grid-template-columns: 1fr; }
   .comparison-wrapper { grid-template-columns: 1fr; }
   .infra-grid { grid-template-columns: 1fr; }
-  .infra-card.highlight { grid-column: span 1; flex-direction: column; }
+  .infra-card.highlight { grid-column: span 1; flex-direction: column; text-align: center; }
   .audience-grid { grid-template-columns: 1fr; }
-  .considerations-grid { grid-template-columns: 1fr 1fr; }
+  .considerations { grid-template-columns: 1fr 1fr; }
   .exclusive-box { flex-direction: column; text-align: center; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
   .floating-vial { display: none; }
 }
 
 @media (max-width: 600px) {
-  .considerations-grid { grid-template-columns: 1fr; }
-  .moa-header h2, .infra-header h2, .cta-footer h2 { font-size: 2.5rem; }
-  .intro-left h2 { font-size: 2.5rem; }
+  .floating-nav {
+    max-width: calc(100vw - 1rem);
+    margin: 0 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  .nav-brand { font-size: 1rem; }
+  .btn-nav { font-size: 0.75rem; padding: 0.5rem 1rem; }
+
+  .hero h1 { font-size: 2.25rem; }
+  .hero h1 em { font-size: 2.6rem; }
+  .glass-btn { font-size: 0.9rem; padding: 0.75rem 1.5rem; }
+  
+  .intro-left h2 { font-size: 2.25rem; }
+  .moa-header h2, .infra-header h2 { font-size: 2.25rem; }
+  .cta-footer h2 { font-size: 2.5rem; }
+  
+  .considerations { grid-template-columns: 1fr; }
+  .exclusive-box { padding: 1.5rem; }
+  .comparison-old, .comparison-new { padding: 2rem 1.5rem; }
+  
+  .hero-content { margin-top: 1rem; padding: 0 1rem; }
 }
